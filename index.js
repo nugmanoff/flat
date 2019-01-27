@@ -1,6 +1,7 @@
 const request = require("request");
 const cheerio = require("cheerio");
 const express = require("express");
+const fs = require("fs");
 
 const app = express();
 app.set("port", 3001);
@@ -64,18 +65,20 @@ const fetchAgent = async page => {
 };
 
 app.get("/", (req, res) => {
-  console.log("Hello Nazerke teacher!\nThis is my submission of bonus task, I have scraped krisha.kz website using RegExps.\nI have uploaded my code to GitHub repository and made it public :)");
+  console.log(
+    "Hello Nazerke teacher!\nThis is my submission of bonus task, I have scraped krisha.kz website using RegExps.\nI have uploaded my code to GitHub repository and made it public :)"
+  );
 });
 
 app.get("/companies", async (req, res) => {
-  for (var i = 1; i <= 5; i++) {
+  for (var i = 1; i <= 50; i++) {
     await fetchCompany(i);
   }
   console.log({ companies });
 });
 
 app.get("/agents", async (req, res) => {
-  for (var i = 1; i <= 5; i++) {
+  for (var i = 1; i <= 50; i++) {
     await fetchAgent(i);
   }
   console.log({ agents });
