@@ -64,7 +64,7 @@ const fetchAgent = async page => {
 };
 
 app.get("/", (req, res) => {
-  console.log("Hello Nazerke teacher! This is my submission of bonus task, I have scraped krisha.kz website using RegExps. I have uploaded my code to GitHub repository and made it public :)")
+  console.log("Hello Nazerke teacher!\nThis is my submission of bonus task, I have scraped krisha.kz website using RegExps.\nI have uploaded my code to GitHub repository and made it public :)");
 });
 
 app.get("/companies", async (req, res) => {
