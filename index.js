@@ -3,7 +3,7 @@ const cheerio = require("cheerio");
 const express = require("express");
 
 const app = express();
-app.set("port", 3000);
+app.set("port", 3001);
 
 const COMPANIES_URL = "https://krisha.kz/pro/company/?page=";
 const AGENTS_URL = "https://krisha.kz/pro/specialist/?page=";
